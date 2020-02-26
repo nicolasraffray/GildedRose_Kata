@@ -17,7 +17,11 @@ describe 'Any noraml product' do
         i += 1
       end
       expect{subject.update_quality()}.to change{subject.items[0].quality}.by(-2)
-    end
+    end 
+
+    it "cannot have a quality that drops below zero" do 
+      expect{subject.update_quality()}.not_to change{subject.items[0].quality}
+    end 
   end
 
   describe "Sell_in dropping" do 
