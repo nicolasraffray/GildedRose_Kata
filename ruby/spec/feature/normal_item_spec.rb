@@ -17,7 +17,7 @@ describe 'Any noraml product' do
         i += 1
       end
       expect{subject.update_quality()}.to change{subject.items[0].quality}.by(-2)
-    end 
+    end
   end
 
   describe "Sell_in dropping" do 
