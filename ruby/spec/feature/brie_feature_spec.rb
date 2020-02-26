@@ -19,8 +19,6 @@ describe 'Brie testing' do
         subject.update_quality()
         i += 1
       end 
-      p subject.update_quality()
-      p subject.items[0].quality
       expect{subject.update_quality()}.to change{subject.items[0].quality}.by(2)
     end
   end 
