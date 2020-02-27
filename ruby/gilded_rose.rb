@@ -66,15 +66,9 @@ class Normal
   end 
 
   def update_quality()
-    if @item.sell_in > 0
-      @item.quality -= 1
-    else 
-      @item.quality -= 2
-    end 
+    @item.sell_in > 0 ? @item.quality -= 1 : @item.quality -= 2
   end 
-
 end 
-
 
 class Item
   attr_accessor :name, :sell_in, :quality

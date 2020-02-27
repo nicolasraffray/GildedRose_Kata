@@ -38,6 +38,6 @@ describe Normal do
         subject.update_quality()
         expect(subject.item).to have_received(:quality=).with(1)
       end 
-    end 
+    end
   end 
 end 
