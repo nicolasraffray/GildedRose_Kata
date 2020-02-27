@@ -61,6 +61,10 @@ class Normal
     @item = an_item 
   end 
 
+  def update_sell_in()
+    @item.sell_in -= 1
+  end 
+
 end 
 
 
