@@ -35,7 +35,8 @@ describe Normal do
       let(:int){-1}
       it "reduces the quality by 2 when passed by sellin" do
         allow(subject.item).to receive(:quality=).with(1)
-        p subject.item.sell_in
+        subject.update_quality()
+        expect(subject.item).to have_received(:quality=).with(1)
       end 
     end 
   end 
