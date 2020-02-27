@@ -54,6 +54,16 @@ class GildedRose
   end
 end
 
+class Normal 
+  attr_reader :item
+
+  def initialize(an_item)
+    @item = an_item 
+  end 
+
+end 
+
+
 class Item
   attr_accessor :name, :sell_in, :quality
 
