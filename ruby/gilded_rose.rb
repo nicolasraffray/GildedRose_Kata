@@ -70,6 +70,15 @@ class Normal
   end 
 end 
 
+class Brie 
+  attr_reader :item 
+
+  def initialize(an_item)
+    @item = an_item 
+  end
+
+end 
+
 class Item
   attr_accessor :name, :sell_in, :quality
 
