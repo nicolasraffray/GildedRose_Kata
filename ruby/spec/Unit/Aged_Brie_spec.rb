@@ -1,4 +1,4 @@
-require_relative './../../gilded_rose'
+require_relative './../../Brie'
 
 describe Brie do 
   let(:item){ double(name: 'Aged Brie', sell_in: int, quality: 3)}

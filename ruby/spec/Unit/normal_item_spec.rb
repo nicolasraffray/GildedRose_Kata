@@ -1,4 +1,4 @@
-require_relative './../../gilded_rose'
+require_relative './../../Normal_good'
 
 describe Normal do 
   let(:item){instance_double("Item", name: "Fruit", sell_in: int, quality: 3)}

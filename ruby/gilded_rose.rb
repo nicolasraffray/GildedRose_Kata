@@ -1,3 +1,6 @@
+require "./Brie"
+require "./Item"
+
 class GildedRose
   attr_reader :items
 
@@ -54,49 +57,3 @@ class GildedRose
   end
 end
 
-class Normal 
-  attr_reader :item
-
-  def initialize(an_item)
-    @item = an_item 
-  end 
-
-  def update_sell_in()
-    @item.sell_in -= 1
-  end 
-
-  def update_quality()
-    @item.sell_in > 0 ? @item.quality -= 1 : @item.quality -= 2
-  end 
-end 
-
-class Brie 
-  attr_reader :item 
-
-  def initialize(an_item)
-    @item = an_item 
-  end
-
-  def update_sell_in()
-    @item.sell_in -= 1
-  end 
-
-  def update_quality()
-    @item.quality += 1
-  end 
-
-end 
-
-class Item
-  attr_accessor :name, :sell_in, :quality
-
-  def initialize(name, sell_in, quality)
-    @name = name
-    @sell_in = sell_in
-    @quality = quality
-  end
-
-  def to_s()
-    "#{@name}, #{@sell_in}, #{@quality}"
-  end
-end
