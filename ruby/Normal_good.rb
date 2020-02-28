@@ -5,6 +5,13 @@ class Normal
     @item = an_item 
   end 
 
+  def full_update()
+    update_sell_in()
+    update_quality()
+  end 
+
+  private
+
   def update_sell_in()
     @item.sell_in -= 1
   end 
