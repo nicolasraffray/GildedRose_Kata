@@ -81,6 +81,10 @@ class Brie
     @item.sell_in -= 1
   end 
 
+  def update_quality()
+    @item.quality += 1
+  end 
+
 end 
 
 class Item
