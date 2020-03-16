@@ -8,8 +8,8 @@ class BackstagePass
   end
 
   def full_update
-    update_sell_in
-    update_quality
+    update_sell_in()
+    update_quality()
   end
 
   private
@@ -19,11 +19,11 @@ class BackstagePass
   end
 
   def update_quality
-    if @item.sell_in > 11 && is_quality_below_50
+    if @item.sell_in > 10 && is_quality_below_50()
       @item.quality += 1
-    elsif @item.sell_in > 6 && is_quality_below_50
+    elsif @item.sell_in > 5 && is_quality_below_50()
       @item.quality += 2
-    elsif @item.sell_in > 0 && is_quality_below_50
+    elsif @item.sell_in > 0 && is_quality_below_50()
       @item.quality += 3
     elsif is_quality_below_50
       @item.quality = 0

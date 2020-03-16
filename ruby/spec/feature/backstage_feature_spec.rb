@@ -9,7 +9,7 @@ describe 'Backstage pass' do
   describe 'Quality Increase' do
     it 'goes up by 1 before being 10 days out from sell_in' do
       i = 0
-      while i < 4
+      while i < 3
         subject.update_quality
         i += 1
       end

@@ -30,8 +30,7 @@ describe 'Brie testing' do
         subject.update_quality
         i += 1
       end
-      subject.update_quality
-      expect(subject.items[0].quality).to eq(50)
+      expect(subject.items[0].quality).to eq(49)
     end
   end
 end

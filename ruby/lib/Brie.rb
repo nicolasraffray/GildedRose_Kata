@@ -8,8 +8,8 @@ class Brie
   end
 
   def full_update
-    update_sell_in
-    update_quality
+    update_sell_in()
+    update_quality()
   end
 
   private
@@ -21,7 +21,7 @@ class Brie
   def update_quality
     if @item.sell_in > 0 && @item.quality < 50
       @item.quality += 1
-    elsif @tem.quality < 50
+    elsif @item.quality < 49
       @item.quality += 2
     end
   end

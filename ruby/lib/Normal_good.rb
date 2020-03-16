@@ -8,8 +8,8 @@ class Normal
   end
 
   def full_update
-    update_sell_in
-    update_quality
+    update_sell_in()
+    update_quality()
   end
 
   private
@@ -19,6 +19,8 @@ class Normal
   end
 
   def update_quality
-    @item.quality -= @item.sell_in > 0 ? 1 : 2
+    if @item.quality > 0 
+      @item.quality -= @item.sell_in > 0 ? 1 : 2
+    end 
   end
 end
