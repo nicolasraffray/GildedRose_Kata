@@ -1,7 +1,6 @@
-# frozen_string_literal: true
-
 require_relative './Brie'
 require_relative './Item'
+require_relative './Conjured'
 
 class GildedRose
   attr_reader :items
@@ -21,6 +20,9 @@ class GildedRose
         backstage.full_update
       when "Sulfuras, Hand of Ragnaros"
         item 
+      when "Conjured"
+        conjured = Conjured.new(item)
+        conjured.full_update
       else 
         normal_good = Normal.new(item)
         normal_good.full_update
